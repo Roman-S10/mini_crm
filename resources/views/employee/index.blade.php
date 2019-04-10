@@ -10,6 +10,7 @@
             <th>Last name</th>
             <th>Email</th>
             <th>Phone</th>
+            <th>Company</th>
             <th></th>
         </tr>
         @if(count($employees))
@@ -19,6 +20,7 @@
                     <td>{{$employee->last_name}}</td>
                     <td>{{$employee->email}}</td>
                     <td>{{$employee->phone}}</td>
+                    <td>{{$employee->company->name}}</td>
                     <td>
                         <a href="{{route('employee.edit', $employee->id)}}" class="btn btn-info">Edit</a>
                         <form action="{{route('employee.destroy', $employee->id)}}" method="POST">
